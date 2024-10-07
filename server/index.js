@@ -8,7 +8,7 @@ import cors from 'cors';
 const app = express();
 const dbUrl = "mongodb+srv://ayushsinghcs21:b3en5ZiHRp2PSFAh@cluster0.yljjr.mongodb.net/users?retryWrites=true&w=majority&appName=Cluster0";
 (async function (){try {const dbResponse = await mongoose.connect(dbUrl);console.log("DB Connected");} catch (error) {console.log(error);}})();
-app.use(cors({origin: 'https://aichatbotusinggeminifrontend.onrender.com/', credentials: true,}));
+app.use(cors({origin: 'https://aichatbotusinggeminifrontend.onrender.com', credentials: true,}));
 app.use(express.json());
 app.use(cookieParser());
 
