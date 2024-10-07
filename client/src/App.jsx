@@ -17,7 +17,7 @@ function App() {
   useEffect( ()=>{
     try {
       (async ()=>{
-        const response = await fetch("http://localhost:3000/verify-token",{
+        const response = await fetch("https://aichatbotusinggeminibackend.onrender.com/verify-token",{
           credentials: 'include'
         });
         const isAuthenticated = await response.json();
@@ -57,7 +57,7 @@ function App() {
   
 const handleLogout = async () => {
   try {
-    const response = await fetch("http://localhost:3000/logout", {
+    const response = await fetch("https://aichatbotusinggeminibackend.onrender.com/logout", {
       method: 'POST',
       credentials: 'include',
     });

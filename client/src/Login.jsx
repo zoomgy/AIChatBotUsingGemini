@@ -12,7 +12,7 @@ function Login() {
   useEffect( ()=>{
     try {
       (async ()=>{
-        const response = await fetch("http://localhost:3000/verify-token",{
+        const response = await fetch("https://aichatbotusinggeminibackend.onrender.com/verify-token",{
           credentials: 'include'
         });
         const isAuthenticated = await response.json();
@@ -47,7 +47,7 @@ function Login() {
       payload = {
         email,password
       }
-      const response = await fetch("http://localhost:3000/login",{
+      const response = await fetch("https://aichatbotusinggeminibackend.onrender.com/login",{
         method:'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -64,7 +64,7 @@ function Login() {
       payload = {
         email,name,password
       }
-      const response = await fetch("http://localhost:3000/register",{
+      const response = await fetch("https://aichatbotusinggeminibackend.onrender.com/register",{
         method:'POST',
         headers: {
           'Content-Type': 'application/json'
